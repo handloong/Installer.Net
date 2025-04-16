@@ -28,57 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControlAppIcon1 = new Installer.Net.UserControlAppIcon();
-            this.flowLayoutPanel.SuspendLayout();
+            this.cboApp = new System.Windows.Forms.CheckBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // cboApp
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(6, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 27);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "浏览器";
+            this.cboApp.AutoSize = true;
+            this.cboApp.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cboApp.Location = new System.Drawing.Point(34, 7);
+            this.cboApp.Name = "cboApp";
+            this.cboApp.Size = new System.Drawing.Size(106, 24);
+            this.cboApp.TabIndex = 6;
+            this.cboApp.Text = "谷歌浏览器";
+            this.cboApp.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel
+            // pictureBox2
             // 
-            this.flowLayoutPanel.AutoScroll = true;
-            this.flowLayoutPanel.Controls.Add(this.userControlAppIcon1);
-            this.flowLayoutPanel.Location = new System.Drawing.Point(3, 47);
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(226, 453);
-            this.flowLayoutPanel.TabIndex = 4;
-            // 
-            // userControlAppIcon1
-            // 
-            this.userControlAppIcon1.BackColor = System.Drawing.Color.White;
-            this.userControlAppIcon1.Location = new System.Drawing.Point(3, 3);
-            this.userControlAppIcon1.Name = "userControlAppIcon1";
-            this.userControlAppIcon1.Size = new System.Drawing.Size(220, 55);
-            this.userControlAppIcon1.TabIndex = 0;
+            this.pictureBox2.Image = global::Installer.Net.Properties.Resources._84;
+            this.pictureBox2.Location = new System.Drawing.Point(8, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // UserControlApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.flowLayoutPanel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.cboApp);
             this.Name = "UserControlApp";
-            this.Size = new System.Drawing.Size(246, 500);
-            this.flowLayoutPanel.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(175, 37);
+            this.Click += new System.EventHandler(this.UserControlAppIcon_Click);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
-        private UserControlAppIcon userControlAppIcon1;
+
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.CheckBox cboApp;
     }
 }

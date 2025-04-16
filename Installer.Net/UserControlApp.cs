@@ -17,26 +17,24 @@ namespace Installer.Net
             InitializeComponent();
         }
 
+        private void UserControlAppIcon_Click(object sender, EventArgs e)
+        {
+            cboApp.Checked = !cboApp.Checked;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            cboApp.Checked = !cboApp.Checked;
+        }
+
         public void SelectAll()
         {
-            foreach (Control item in flowLayoutPanel.Controls)
-            {
-                if (item is UserControlAppIcon)
-                {
-                    (item as UserControlAppIcon).SelectAll();
-                }
-            }
+            cboApp.Checked = true;
         }
 
         public void UnSelectAll()
         {
-            foreach (Control item in flowLayoutPanel.Controls)
-            {
-                if (item is UserControlAppIcon)
-                {
-                    (item as UserControlAppIcon).UnSelectAll();
-                }
-            }
+            cboApp.Checked = !cboApp.Checked;
         }
     }
 }

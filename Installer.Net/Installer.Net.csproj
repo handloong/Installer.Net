@@ -52,6 +52,7 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImageHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControlApp.cs">
@@ -59,12 +60,6 @@
     </Compile>
     <Compile Include="UserControlApp.Designer.cs">
       <DependentUpon>UserControlApp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControlAppIcon.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlAppIcon.Designer.cs">
-      <DependentUpon>UserControlAppIcon.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -82,9 +77,6 @@
     <EmbeddedResource Include="UserControlApp.resx">
       <DependentUpon>UserControlApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlAppIcon.resx">
-      <DependentUpon>UserControlAppIcon.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,7 +91,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\chrome.png" />
+    <None Include="Resources\84.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

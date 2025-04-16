@@ -54,9 +54,9 @@ namespace Installer.Net
         {
             foreach (Control item in flowLayoutPanel.Controls)
             {
-                if (item is UserControlAppIcon)
+                if (item is UserControlApp)
                 {
-                    (item as UserControlAppIcon).SelectAll();
+                    (item as UserControlApp).SelectAll();
                 }
             }
         }
@@ -65,9 +65,9 @@ namespace Installer.Net
         {
             foreach (Control item in flowLayoutPanel.Controls)
             {
-                if (item is UserControlAppIcon)
+                if (item is UserControlApp)
                 {
-                    (item as UserControlAppIcon).UnSelectAll();
+                    (item as UserControlApp).UnSelectAll();
                 }
             }
         }
