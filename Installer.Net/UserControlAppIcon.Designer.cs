@@ -36,10 +36,10 @@
             // cboApp
             // 
             this.cboApp.AutoSize = true;
-            this.cboApp.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cboApp.Location = new System.Drawing.Point(55, 18);
+            this.cboApp.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cboApp.Location = new System.Drawing.Point(34, 7);
             this.cboApp.Name = "cboApp";
-            this.cboApp.Size = new System.Drawing.Size(120, 22);
+            this.cboApp.Size = new System.Drawing.Size(106, 24);
             this.cboApp.TabIndex = 6;
             this.cboApp.Text = "谷歌浏览器";
             this.cboApp.UseVisualStyleBackColor = true;
@@ -49,8 +49,8 @@
             this.pictureBox2.Image = global::Installer.Net.Properties.Resources.chrome;
             this.pictureBox2.Location = new System.Drawing.Point(8, 7);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(41, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -63,7 +63,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.cboApp);
             this.Name = "UserControlAppIcon";
-            this.Size = new System.Drawing.Size(220, 55);
+            this.Size = new System.Drawing.Size(175, 37);
             this.Click += new System.EventHandler(this.UserControlAppIcon_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

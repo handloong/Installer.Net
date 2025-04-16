@@ -14,6 +14,8 @@ namespace Installer.Net
         private void InitializeTableControl(string fileName)
         {
             var applicationInfos = LoadApplicationInfos();
+
+
         }
 
         private List<ApplicationInfo> LoadApplicationInfos()
@@ -52,9 +54,9 @@ namespace Installer.Net
         {
             foreach (Control item in flowLayoutPanel.Controls)
             {
-                if (item is UserControlApp)
+                if (item is UserControlAppIcon)
                 {
-                    (item as UserControlApp).SelectAll();
+                    (item as UserControlAppIcon).SelectAll();
                 }
             }
         }
@@ -63,9 +65,9 @@ namespace Installer.Net
         {
             foreach (Control item in flowLayoutPanel.Controls)
             {
-                if (item is UserControlApp)
+                if (item is UserControlAppIcon)
                 {
-                    (item as UserControlApp).UnSelectAll();
+                    (item as UserControlAppIcon).UnSelectAll();
                 }
             }
         }
