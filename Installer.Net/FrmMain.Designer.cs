@@ -48,7 +48,7 @@
             this.选中ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(781, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(781, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -100,9 +100,9 @@
             // 
             this.flowLayoutPanel.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(0, 28);
+            this.flowLayoutPanel.Location = new System.Drawing.Point(0, 30);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(781, 518);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(781, 516);
             this.flowLayoutPanel.TabIndex = 1;
             // 
             // FrmMain
