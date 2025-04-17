@@ -1,4 +1,13 @@
 [
+
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/135.0.7049.96_chrome_installer-win64.exe",
+    "Name": "Chrome浏览器",
+    "Params": "/S",
+    "Type": "exe"
+  },
   {
     "AfterInstallParams": "",
     "Checked": false,
