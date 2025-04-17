@@ -105,7 +105,7 @@
             // 
             // 开源地址ToolStripMenuItem
             // 
-            this.开源地址ToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_茄子;
+            this.开源地址ToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_蓝莓;
             this.开源地址ToolStripMenuItem.Name = "开源地址ToolStripMenuItem";
             this.开源地址ToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.开源地址ToolStripMenuItem.Text = "开源地址";
@@ -132,7 +132,7 @@
             // 
             // 作者HandLoongToolStripMenuItem
             // 
-            this.作者HandLoongToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_樱桃;
+            this.作者HandLoongToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_蓝莓;
             this.作者HandLoongToolStripMenuItem.Name = "作者HandLoongToolStripMenuItem";
             this.作者HandLoongToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.作者HandLoongToolStripMenuItem.Text = "作者-HandLoong";
