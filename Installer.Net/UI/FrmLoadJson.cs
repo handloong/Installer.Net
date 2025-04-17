@@ -36,5 +36,13 @@ namespace Installer.Net.UI
             txtUrl.Text = Pastebin.ICTUrl;
             btnInvoke_Click(null, null);
         }
+
+        private void FrmLoadJson_Load(object sender, EventArgs e)
+        {
+            button1.FlatAppearance.BorderSize = 0;       // 边框大小设为 0
+            button1.BackColor = Color.Transparent;       // 背景透明（可选）
+            button1.FlatAppearance.MouseDownBackColor = Color.LightGray; // 点击效果（可选）
+            button1.FlatAppearance.MouseOverBackColor = Color.Gainsboro; // 悬停效果（可选）
+        }
     }
 }
