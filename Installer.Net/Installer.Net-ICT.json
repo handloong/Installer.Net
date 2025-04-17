@@ -42,6 +42,22 @@
   {
     "AfterInstallParams": "",
     "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/Git-2.38.1-64-bit.exe",
+    "Name": "Git",
+    "Params": "/S",
+    "Type": "exe"
+  },
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/TortoiseGit-2.12.0.0-64bit.msi",
+    "Name": "TortoiseGit",
+    "Params": "/passive",
+    "Type": "msi"
+  },
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
     "DownloadUrl": "https://dl.todesk.com/irrigation/ToDesk_4.7.6.3.exe",
     "Name": "ToDesk_4.7.6.3",
     "Params": "/S",
