@@ -76,6 +76,15 @@
   {
     "AfterInstallParams": "",
     "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/Apifox-2.7.6.exe",
+    "Name": "Apifox-2.7.6",
+    "Params": "/S",
+    "Type": "exe",
+    "Description": "这个也挺好用"
+  },
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
     "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/npp.8.6.7.Installer.exe",
     "Name": "Notepad++",
     "Params": "/S",
