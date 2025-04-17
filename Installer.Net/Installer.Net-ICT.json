@@ -45,7 +45,7 @@
     "Checked": false,
     "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/Git-2.38.1-64-bit.exe",
     "Name": "Git",
-    "Params": "/S",
+    "Params": "/VERYSILENT /ALLUSERS /NOCANCEL /SUPPERESSMSGBOXES /NORESTART",
     "Type": "exe"
   },
   {
@@ -76,7 +76,7 @@
   {
     "AfterInstallParams": "",
     "Checked": false,
-    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/nnpp.8.6.7.Installer.exe",
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/npp.8.6.7.Installer.exe",
     "Name": "Notepad++",
     "Params": "/S",
     "Type": "exe",
@@ -87,7 +87,7 @@
     "Checked": false,
     "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/Notepad--v3.2.0-plugin-Installer.exe",
     "Name": "Notepad减减",
-    "Params": "/S",
+    "Params": "/VERYSILENT /ALLUSERS /NOCANCEL /SUPPERESSMSGBOXES /NORESTART",
     "Type": "exe",
     "Description": "notepad--是一个国产跨平台、轻量级的文本编辑器"
   },
