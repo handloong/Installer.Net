@@ -60,7 +60,7 @@
     "AfterInstallParams": "",
     "Checked": false,
     "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/Postman-win64-7.3.4-Setup.exe",
-    "Name": "Postman",
+    "Name": "#Postman",
     "Params": "/S",
     "Type": "exe"
   },

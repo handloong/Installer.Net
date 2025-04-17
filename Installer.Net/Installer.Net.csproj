@@ -51,6 +51,12 @@
     <Compile Include="Helper\Extensions.cs" />
     <Compile Include="Helper\JsonMini.cs" />
     <Compile Include="Helper\Pastebin.cs" />
+    <Compile Include="UI\FrmCleanup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmCleanup.Designer.cs">
+      <DependentUpon>FrmCleanup.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmInstalling.cs">
       <SubType>Form</SubType>
     </Compile>

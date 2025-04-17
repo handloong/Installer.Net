@@ -3,8 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -28,7 +30,36 @@ namespace Installer.Net
             toolTip.ShowAlways = true;     // 即使窗体不活动也显示提示
             toolTip.BackColor = Color.LightYellow;
             toolTip.ForeColor = Color.Black;
-            toolTip.IsBalloon = true;     
+            toolTip.IsBalloon = true;
+            Application.ApplicationExit += OnApplicationExit;
+        }
+
+        private void OnApplicationExit(object sender, EventArgs e)
+        {
+            using (var cleanupForm = new FrmCleanup())
+            {
+                cleanupForm.Show();
+                try
+                {
+                    string _tempDirectory = Path.Combine(Path.GetTempPath(), "Installer.Net");
+                    if (Directory.Exists(_tempDirectory))
+                    {
+                        // 更安全的删除方式（处理可能被锁定的文件）
+                        foreach (var file in Directory.GetFiles(_tempDirectory, "*", SearchOption.AllDirectories))
+                        {
+                            try
+                            {
+                                File.Delete(file);
+                            }
+                            catch { /* 忽略无法删除的文件 */ }
+                        }
+                    }
+                }
+                finally
+                {
+                    cleanupForm.Close();
+                }
+            }
         }
 
         private ToolTip toolTip = new ToolTip();
@@ -72,26 +103,7 @@ namespace Installer.Net
             await InitializeTableControlAsync(Pastebin.DefaultUrl);
         }
 
-        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void unSelectAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void InstallToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void loadConfigJsonToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+       
         private void 开源地址ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("https://github.com/handloong/Installer.Net");
@@ -172,6 +184,13 @@ namespace Installer.Net
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
+        }
+
+        private void 临时文件夹ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string tempPath = Path.Combine(Path.GetTempPath(), "Installer.Net");
+            Directory.CreateDirectory(tempPath);
+            Process.Start(tempPath);
         }
     }
 }
