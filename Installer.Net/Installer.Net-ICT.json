@@ -1,7 +1,7 @@
 [
 
   {
-    "AfterInstallParams": "",
+    "AfterInstallParams": "taskkill /f /im chrome.exe",
     "Checked": false,
     "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/135.0.7049.96_chrome_installer-win64.exe",
     "Name": "Chrome浏览器",
@@ -164,7 +164,7 @@
     "Description": "FileZilla这个不错哦👌"
   },
   {
-    "AfterInstallParams": "",
+    "AfterInstallParams": "taskkill /f /im resp.exe",
     "Checked": false,
     "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/resp-2022.5.0.0.exe",
     "Name": "resp",
