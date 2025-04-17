@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Installer.Net.UI
+{
+    public partial class FrmLoadJson : Form
+    {
+        private readonly Action<string> _action;
+
+        public FrmLoadJson(Action<string> action)
+        {
+            InitializeComponent();
+            _action = action;
+        }
+
+        private void btnInvoke_Click(object sender, EventArgs e)
+        {
+            _action.Invoke(txtUrl.Text);
+            this.Close();
+        }
+    }
+}

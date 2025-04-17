@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Installer.Net.UI;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Installer.Net
@@ -17,51 +19,35 @@ namespace Installer.Net
             flowLayoutPanel.AutoScroll = true;
         }
 
-        private void InitializeTableControl(string fileName)
+        private async Task InitializeTableControlAsync(string url)
         {
-            var applicationInfos = LoadApplicationInfos();
-
-            flowLayoutPanel.Controls.Clear();
-
-            foreach (var item in applicationInfos)
+            try
             {
-                var cb = new CheckBox();
-                cb.Tag = item;
-                cb.Text = item.Name;
-                cb.Checked = item.Checked;
-                cb.AutoSize = true;
-                flowLayoutPanel.Controls.Add(cb);
+                var applicationInfos = await Pastebin.GetApplicationInfosAsync(url);
+                flowLayoutPanel.Controls.Clear();
+
+                foreach (var item in applicationInfos)
+                {
+                    var cb = new CheckBox();
+                    cb.Tag = item;
+                    cb.Text = item.Name;
+                    cb.Checked = item.Checked;
+                    cb.AutoSize = true;
+                    flowLayoutPanel.Controls.Add(cb);
+                }
+            }
+            catch (Exception ex)
+            {
+                lblLoading.Text = ex.Message;
+                lblLoading.ForeColor = Color.Red;
+                lblLoading.Show();
             }
         }
 
-        private List<ApplicationInfo> LoadApplicationInfos()
-        {
-            return new List<ApplicationInfo>
-            {
-                new ApplicationInfo{
-                      Name ="mRemoteNG",
-                      DownloadUrl="http://10.32.44.80:8006/Soft/Installer.Net/mRemoteNG-Installer-1.77.3.nb-1784.msi",
-                      Type ="msi",
-                      Params ="/passive",
-                },
-                new ApplicationInfo{
-                      Name ="bandizip无广告",
-                       DownloadUrl="http://10.32.44.80:8006/Soft/Installer.Net/BANDIZIP6-SETUP.exe",
-                      Type="exe",
-                      Params ="/S",
-                },
-                new ApplicationInfo{
-                      Name ="微信",
-                      DownloadUrl="http://10.32.44.80:8006/Soft/Installer.Net/WeChatWin.exe",
-                      Type="exe",
-                      Params ="/S",
-                }
-            };
-        }
 
-        private void FrmMain_Load(object sender, EventArgs e)
+        private async void FrmMain_Load(object sender, EventArgs e)
         {
-            InitializeTableControl("");
+            await InitializeTableControlAsync(Pastebin.DefaultUrl);
         }
 
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
@@ -110,6 +96,14 @@ namespace Installer.Net
             {
                 MessageBox.Show("未选中任何程序");
             }
+        }
+
+        private void loadConfigJsonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmLoadJson(async x =>
+            {
+                await InitializeTableControlAsync(x);
+            }).ShowDialog();
         }
     }
 }

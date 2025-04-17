@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IChoo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helper\Extensions.cs" />
+    <Compile Include="Helper\JsonMini.cs" />
+    <Compile Include="Helper\Pastebin.cs" />
     <Compile Include="UI\FrmInstalling.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +58,12 @@
       <DependentUpon>FrmInstalling.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ApplicationInfo.cs" />
+    <Compile Include="UI\FrmLoadJson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmLoadJson.Designer.cs">
+      <DependentUpon>FrmLoadJson.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="UI\FrmInstalling.resx">
       <DependentUpon>FrmInstalling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmLoadJson.resx">
+      <DependentUpon>FrmLoadJson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -90,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IChoo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
