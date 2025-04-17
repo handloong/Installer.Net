@@ -144,5 +144,23 @@
     "Params": "/S",
     "Type": "exe",
     "Description": "php是世界上最好的语言,java说我不服"
+  },
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/FileZilla_3.68.1_win64-setup.exe",
+    "Name": "FileZilla",
+    "Params": "/S",
+    "Type": "exe",
+    "Description": "FileZilla这个不错哦👌"
+  },
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/resp-2022.5.0.0.exe",
+    "Name": "resp",
+    "Params": "/S",
+    "Type": "exe",
+    "Description": "还不错的Redis管理工具"
   }
 ]
