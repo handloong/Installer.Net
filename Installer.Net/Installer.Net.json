@@ -1,0 +1,34 @@
+[
+  {
+    "Checked": true,
+    "Name": "mRemoteNG",
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/mRemoteNG-Installer-1.77.3.nb-1784.msi",
+    "Type": "msi",
+    "Params": "/passive",
+    "AfterInstallParams": ""
+  },
+  {
+    "Checked": true,
+    "Name": "bandizip官方绝版无广告",
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/BANDIZIP6-SETUP.exe",
+    "Type": "exe",
+    "Params": "/S",
+    "AfterInstallParams": ""
+  },
+  {
+    "Checked": false,
+    "Name": "Wireshark-4.4.5-x64",
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/Wireshark-4.4.5-x64.exe",
+    "Type": "exe",
+    "Params": "/S",
+    "AfterInstallParams": ""
+  },
+  {
+    "Checked": false,
+    "Name": "微信",
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/WeChatWin.exe",
+    "Type": "exe",
+    "Params": "/S",
+    "AfterInstallParams": ""
+  }
+]
