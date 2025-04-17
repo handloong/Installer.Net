@@ -34,14 +34,14 @@
             this.全选ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.反选ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.安装ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.其他ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.临时文件夹ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.没有想要的软件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.开源地址ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.作者HandLoongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.lblLoading = new System.Windows.Forms.Label();
-            this.其他ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.临时文件夹ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.没有想要的软件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.flowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +97,32 @@
             this.安装ToolStripMenuItem.Text = "安装";
             this.安装ToolStripMenuItem.Click += new System.EventHandler(this.安装ToolStripMenuItem_Click);
             // 
+            // 其他ToolStripMenuItem
+            // 
+            this.其他ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.临时文件夹ToolStripMenuItem,
+            this.没有想要的软件ToolStripMenuItem});
+            this.其他ToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_茄子;
+            this.其他ToolStripMenuItem.Name = "其他ToolStripMenuItem";
+            this.其他ToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
+            this.其他ToolStripMenuItem.Text = "其他";
+            // 
+            // 临时文件夹ToolStripMenuItem
+            // 
+            this.临时文件夹ToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_茄子;
+            this.临时文件夹ToolStripMenuItem.Name = "临时文件夹ToolStripMenuItem";
+            this.临时文件夹ToolStripMenuItem.Size = new System.Drawing.Size(240, 30);
+            this.临时文件夹ToolStripMenuItem.Text = "临时文件夹";
+            this.临时文件夹ToolStripMenuItem.Click += new System.EventHandler(this.临时文件夹ToolStripMenuItem_Click);
+            // 
+            // 没有想要的软件ToolStripMenuItem
+            // 
+            this.没有想要的软件ToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_茄子;
+            this.没有想要的软件ToolStripMenuItem.Name = "没有想要的软件ToolStripMenuItem";
+            this.没有想要的软件ToolStripMenuItem.Size = new System.Drawing.Size(240, 30);
+            this.没有想要的软件ToolStripMenuItem.Text = "没有想要的软件?";
+            this.没有想要的软件ToolStripMenuItem.Click += new System.EventHandler(this.没有想要的软件ToolStripMenuItem_Click);
+            // 
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -140,32 +166,6 @@
             this.lblLoading.Size = new System.Drawing.Size(79, 15);
             this.lblLoading.TabIndex = 0;
             this.lblLoading.Text = "Loading..";
-            // 
-            // 其他ToolStripMenuItem
-            // 
-            this.其他ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.临时文件夹ToolStripMenuItem,
-            this.没有想要的软件ToolStripMenuItem});
-            this.其他ToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_茄子;
-            this.其他ToolStripMenuItem.Name = "其他ToolStripMenuItem";
-            this.其他ToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
-            this.其他ToolStripMenuItem.Text = "其他";
-            // 
-            // 临时文件夹ToolStripMenuItem
-            // 
-            this.临时文件夹ToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_茄子;
-            this.临时文件夹ToolStripMenuItem.Name = "临时文件夹ToolStripMenuItem";
-            this.临时文件夹ToolStripMenuItem.Size = new System.Drawing.Size(240, 30);
-            this.临时文件夹ToolStripMenuItem.Text = "临时文件夹";
-            this.临时文件夹ToolStripMenuItem.Click += new System.EventHandler(this.临时文件夹ToolStripMenuItem_Click);
-            // 
-            // 没有想要的软件ToolStripMenuItem
-            // 
-            this.没有想要的软件ToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_茄子;
-            this.没有想要的软件ToolStripMenuItem.Name = "没有想要的软件ToolStripMenuItem";
-            this.没有想要的软件ToolStripMenuItem.Size = new System.Drawing.Size(240, 30);
-            this.没有想要的软件ToolStripMenuItem.Text = "没有想要的软件?";
-            this.没有想要的软件ToolStripMenuItem.Click += new System.EventHandler(this.没有想要的软件ToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
