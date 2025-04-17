@@ -38,9 +38,13 @@ namespace Installer.Net
                 throw new ArgumentException("URL不能为空", nameof(url));
             }
 
+            string timestampedUrl = url.Contains("?")
+                                       ? $"{url}&_={DateTimeOffset.UtcNow.UtcTicks}"
+                                       : $"{url}?_={DateTimeOffset.UtcNow.UtcTicks}";
+          
             try
             {
-                var response = await _httpClient.GetAsync(url);
+                var response = await _httpClient.GetAsync(timestampedUrl);
                 response.EnsureSuccessStatusCode(); // 确保请求成功
                 return await response.Content.ReadAsStringAsync();
             }
@@ -49,6 +53,5 @@ namespace Installer.Net
                 throw new Exception($"获取内容失败: {ex.Message}", ex);
             }
         }
-
     }
 }
