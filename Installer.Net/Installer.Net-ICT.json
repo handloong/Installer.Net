@@ -135,5 +135,14 @@
     "Params": "/S",
     "Type": "exe",
     "Description": "php是世界上最好的语言,.net 9.0.203说我更不服"
+  },
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/ideaIU-2024.2.0.1.exe",
+    "Name": "idea-2024",
+    "Params": "/S",
+    "Type": "exe",
+    "Description": "php是世界上最好的语言,java说我不服"
   }
 ]
