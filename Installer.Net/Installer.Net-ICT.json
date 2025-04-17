@@ -76,7 +76,7 @@
   {
     "AfterInstallParams": "",
     "Checked": false,
-    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/npp.8.6.7.Installer",
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/nnpp.8.6.7.Installer.exe",
     "Name": "Notepad++",
     "Params": "/S",
     "Type": "exe",
@@ -85,8 +85,8 @@
   {
     "AfterInstallParams": "",
     "Checked": false,
-    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/npp.8.6.7.Installer",
-    "Name": "Notepad--",
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/Notepad--v3.2.0-plugin-Installer.exe",
+    "Name": "Notepad减减",
     "Params": "/S",
     "Type": "exe",
     "Description": "notepad--是一个国产跨平台、轻量级的文本编辑器"
@@ -97,6 +97,34 @@
     "DownloadUrl": "https://dl.todesk.com/irrigation/ToDesk_4.7.6.3.exe",
     "Name": "ToDesk_4.7.6.3",
     "Params": "/S",
-    "Type": "exe"
+    "Type": "exe",
+    "Description": "这个需要外网"
+  },
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/dotnet-sdk-6.0.428-win-x64.exe",
+    "Name": "dotnet6",
+    "Params": "/S",
+    "Type": "exe",
+    "Description": "php是世界上最好的语言,.net 6.0.428说我不服"
+  },
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/dotnet-sdk-8.0.408-win-x64.exe",
+    "Name": "dotnet8",
+    "Params": "/S",
+    "Type": "exe",
+    "Description": "php是世界上最好的语言,.net 8.0.408说我不服"
+  },
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/dotnet-sdk-9.0.203-win-x64.exe",
+    "Name": "dotnet9",
+    "Params": "/S",
+    "Type": "exe",
+    "Description": "php是世界上最好的语言,.net 9.0.203说我更不服"
   }
 ]
