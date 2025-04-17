@@ -109,6 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="IChoo.ico" />
+    <None Include="Resources\110_樱桃.png" />
+    <None Include="Resources\110_茄子.png" />
+    <None Include="Resources\110_蓝莓.png" />
+    <None Include="Resources\110_火龙果.png" />
+    <None Include="Resources\110_大葱.png" />
+    <None Include="Resources\110_草莓.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

@@ -56,7 +56,7 @@
             this.ClientSize = new System.Drawing.Size(489, 92);
             this.Controls.Add(this.lblSpeed);
             this.Controls.Add(this.progressBar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmInstalling";

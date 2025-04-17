@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLoadJson));
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.btnInvoke = new System.Windows.Forms.Button();
-            this.linkLabelIct = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtUrl
             // 
-            this.txtUrl.Location = new System.Drawing.Point(13, 13);
+            this.txtUrl.Location = new System.Drawing.Point(89, 13);
             this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(497, 25);
+            this.txtUrl.Size = new System.Drawing.Size(421, 25);
             this.txtUrl.TabIndex = 0;
             this.txtUrl.Text = "https://pastebin.com/raw/BqXs0rhw";
             // 
@@ -51,29 +54,51 @@
             this.btnInvoke.UseVisualStyleBackColor = true;
             this.btnInvoke.Click += new System.EventHandler(this.btnInvoke_Click);
             // 
-            // linkLabelIct
+            // label1
             // 
-            this.linkLabelIct.AutoSize = true;
-            this.linkLabelIct.Location = new System.Drawing.Point(12, 64);
-            this.linkLabelIct.Name = "linkLabelIct";
-            this.linkLabelIct.Size = new System.Drawing.Size(67, 15);
-            this.linkLabelIct.TabIndex = 2;
-            this.linkLabelIct.TabStop = true;
-            this.linkLabelIct.Text = "使用内网";
-            this.linkLabelIct.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelIct_LinkClicked);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(94, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 15);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "仅限ICT员工使用";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 56);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 31);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "内网";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "源地址:";
             // 
             // FrmLoadJson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 99);
-            this.Controls.Add(this.linkLabelIct);
+            this.ClientSize = new System.Drawing.Size(522, 94);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInvoke);
             this.Controls.Add(this.txtUrl);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmLoadJson";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "加载配置";
+            this.Text = "配置源";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,6 +108,8 @@
 
         private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.Button btnInvoke;
-        private System.Windows.Forms.LinkLabel linkLabelIct;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -67,6 +67,39 @@ namespace Installer.Net
 
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void unSelectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void InstallToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void loadConfigJsonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void 开源地址ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/handloong/Installer.Net");
+        }
+
+        public string AssemblyVersion
+        {
+            get
+            {
+                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            }
+        }
+
+        private void 全选ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             foreach (Control item in flowLayoutPanel.Controls)
             {
                 if (item is CheckBox)
@@ -76,7 +109,7 @@ namespace Installer.Net
             }
         }
 
-        private void unSelectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 反选ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Control item in flowLayoutPanel.Controls)
             {
@@ -88,7 +121,15 @@ namespace Installer.Net
             }
         }
 
-        private void InstallToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 配置ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FrmLoadJson(async x =>
+            {
+                await InitializeTableControlAsync(x);
+            }).ShowDialog();
+        }
+
+        private void 安装ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             List<ApplicationInfo> apps = new List<ApplicationInfo>();
 
@@ -110,27 +151,6 @@ namespace Installer.Net
             else
             {
                 MessageBox.Show("未选中任何程序");
-            }
-        }
-
-        private void loadConfigJsonToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new FrmLoadJson(async x =>
-            {
-                await InitializeTableControlAsync(x);
-            }).ShowDialog();
-        }
-
-        private void 开源地址ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://github.com/handloong/Installer.Net");
-        }
-
-        public string AssemblyVersion
-        {
-            get
-            {
-                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
         }
     }
