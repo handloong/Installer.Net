@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("Installer.Net")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Installer.Net 小老鼠软件安装器")]
+[assembly: AssemblyDescription("小老鼠软件安装器")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("P R C")]
-[assembly: AssemblyProduct("Installer.Net")]
+[assembly: AssemblyProduct("Installer.Net 小老鼠软件安装器")]
 [assembly: AssemblyCopyright("Copyright © P R C 2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

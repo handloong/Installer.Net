@@ -1,8 +1,10 @@
 ﻿using Installer.Net.UI;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +19,8 @@ namespace Installer.Net
             flowLayoutPanel.WrapContents = true; // 确保允许换行
             flowLayoutPanel.AutoSize = true;     // 自动调整大小
             flowLayoutPanel.AutoScroll = true;
+
+            this.Text += $" v{AssemblyVersion}";
         }
 
         private async Task InitializeTableControlAsync(string url)
@@ -104,6 +108,19 @@ namespace Installer.Net
             {
                 await InitializeTableControlAsync(x);
             }).ShowDialog();
+        }
+
+        private void 开源地址ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/handloong/Installer.Net");
+        }
+
+        public string AssemblyVersion
+        {
+            get
+            {
+                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            }
         }
     }
 }

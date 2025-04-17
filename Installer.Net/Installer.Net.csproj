@@ -7,7 +7,7 @@
     <ProjectGuid>{33DDA0F2-1AB0-4D52-9524-D8D48F47AF6F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Installer.Net</RootNamespace>
-    <AssemblyName>Installer.Net</AssemblyName>
+    <AssemblyName>小老鼠软件安装器</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

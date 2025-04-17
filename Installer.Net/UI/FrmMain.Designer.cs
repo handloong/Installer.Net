@@ -127,6 +127,7 @@
             this.开源地址ToolStripMenuItem.Name = "开源地址ToolStripMenuItem";
             this.开源地址ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.开源地址ToolStripMenuItem.Text = "开源地址";
+            this.开源地址ToolStripMenuItem.Click += new System.EventHandler(this.开源地址ToolStripMenuItem_Click);
             // 
             // lblLoading
             // 
