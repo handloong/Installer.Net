@@ -1,21 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Installer.Net
 {
-    public partial class UserControlApp: UserControl
+    public partial class UserControlApp : UserControl
     {
-        public UserControlApp()
+        public ApplicationInfo ApplicationInfo { get; internal set; }
+
+        public UserControlApp(ApplicationInfo applicationInfo)
         {
             InitializeComponent();
+            ApplicationInfo = applicationInfo;
+
+            picIcon.Image = ImageHelper.Base64ToImage(applicationInfo.Icon);
+            cboApp.Text = ApplicationInfo.Name;
+            if (ApplicationInfo.AutoSelect)
+            {
+                cboApp.Checked = true;
+            }
         }
+
 
         private void UserControlAppIcon_Click(object sender, EventArgs e)
         {

@@ -35,6 +35,7 @@ namespace Installer.Net
             }
             catch (Exception)
             {
+                return Properties.Resources._84;
             }
         }
     }

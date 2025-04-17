@@ -15,6 +15,13 @@ namespace Installer.Net
         {
             var applicationInfos = LoadApplicationInfos();
 
+            flowLayoutPanel.Controls.Clear();
+
+            foreach (var item in applicationInfos)
+            {
+                var app = new UserControlApp(item);
+                flowLayoutPanel.Controls.Add(app);
+            }
 
         }
 
@@ -47,7 +54,7 @@ namespace Installer.Net
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-
+            InitializeTableControl("");
         }
 
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +77,11 @@ namespace Installer.Net
                     (item as UserControlApp).UnSelectAll();
                 }
             }
+        }
+
+        private void InstallToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

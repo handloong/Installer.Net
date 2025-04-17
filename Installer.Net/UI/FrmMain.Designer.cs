@@ -36,6 +36,7 @@
             this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unSelectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.InstallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             this.选中ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(781, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(781, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -56,7 +57,8 @@
             // 
             this.菜单ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.makeSoftListToolStripMenuItem,
-            this.loadConfigJsonToolStripMenuItem});
+            this.loadConfigJsonToolStripMenuItem,
+            this.InstallToolStripMenuItem});
             this.菜单ToolStripMenuItem.Name = "菜单ToolStripMenuItem";
             this.菜单ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.菜单ToolStripMenuItem.Text = "菜单";
@@ -64,13 +66,13 @@
             // makeSoftListToolStripMenuItem
             // 
             this.makeSoftListToolStripMenuItem.Name = "makeSoftListToolStripMenuItem";
-            this.makeSoftListToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.makeSoftListToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.makeSoftListToolStripMenuItem.Text = "创建配置";
             // 
             // loadConfigJsonToolStripMenuItem
             // 
             this.loadConfigJsonToolStripMenuItem.Name = "loadConfigJsonToolStripMenuItem";
-            this.loadConfigJsonToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.loadConfigJsonToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.loadConfigJsonToolStripMenuItem.Text = "加载配置";
             // 
             // 选中ToolStripMenuItem
@@ -100,10 +102,17 @@
             // 
             this.flowLayoutPanel.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(0, 30);
+            this.flowLayoutPanel.Location = new System.Drawing.Point(0, 28);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(781, 516);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(781, 518);
             this.flowLayoutPanel.TabIndex = 1;
+            // 
+            // InstallToolStripMenuItem
+            // 
+            this.InstallToolStripMenuItem.Name = "InstallToolStripMenuItem";
+            this.InstallToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.InstallToolStripMenuItem.Text = "安装";
+            this.InstallToolStripMenuItem.Click += new System.EventHandler(this.InstallToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -133,6 +142,7 @@
         private System.Windows.Forms.ToolStripMenuItem 选中ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unSelectAllToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem InstallToolStripMenuItem;
     }
 }
 
