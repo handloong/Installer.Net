@@ -31,6 +31,9 @@ namespace Installer.Net
 
                 try
                 {
+                    //解决部分网站错误: 请求被中止: 未能创建 SSL/TLS 安全通道
+                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3;
+
                     using (var client = new WebClient())
                     {
                         client.DownloadProgressChanged += (s, e) =>
@@ -91,8 +94,10 @@ namespace Installer.Net
                     }
                     successful++;
                 }
-                catch (Exception)
-                { }
+                catch (Exception ex)
+                {
+
+                }
 
                 if (_applicationInfos.Count == i + 1)
                 {
