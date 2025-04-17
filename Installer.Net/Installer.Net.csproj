@@ -45,14 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationInfo.cs" />
+    <Compile Include="UI\FrmInstalling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmInstalling.Designer.cs">
+      <DependentUpon>FrmInstalling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ApplicationInfo.cs" />
     <Compile Include="UI\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageHelper.cs" />
+    <Compile Include="Helper\ImageHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\UserControlApp.cs">
@@ -61,6 +67,9 @@
     <Compile Include="UI\UserControlApp.Designer.cs">
       <DependentUpon>UserControlApp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\FrmInstalling.resx">
+      <DependentUpon>FrmInstalling.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>

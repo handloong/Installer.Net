@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Installer.Net
@@ -81,7 +82,27 @@ namespace Installer.Net
 
         private void InstallToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            List<ApplicationInfo> apps = new List<ApplicationInfo>();
 
+            foreach (Control item in flowLayoutPanel.Controls)
+            {
+                if (item is UserControlApp)
+                {
+                    var app = (item as UserControlApp);
+                    if (app.Checked)
+                    {
+                        apps.Add(app.ApplicationInfo);
+                    }
+                }
+            }
+            if (apps.Any())
+            {
+                new FrmInstalling(apps).ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("未选中任何程序");
+            }
         }
     }
 }

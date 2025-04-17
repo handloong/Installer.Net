@@ -40,5 +40,6 @@ namespace Installer.Net
         {
             cboApp.Checked = !cboApp.Checked;
         }
+        public bool Checked => cboApp.Checked;
     }
 }
