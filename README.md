@@ -1,7 +1,5 @@
 # Installer.Net / 小老鼠软件安装器
 
-![Installer.Net Banner](https://github.com/user-attachments/assets/3940d7e7-01e6-4643-94b0-cd2c12ebee5e)
-
 ## 简介
 **Installer.Net** 是一款类似 [Ninite](https://ninite.com/) 的静默软件安装工具，旨在让用户快速、高效地安装所需的软件，提供简洁的安装体验。
 
