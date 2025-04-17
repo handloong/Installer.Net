@@ -13,7 +13,8 @@
     "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/BANDIZIP6-SETUP.exe",
     "Type": "exe",
     "Params": "/S",
-    "AfterInstallParams": ""
+    "AfterInstallParams": "",
+    "Description": "官网最后一个绝版无广告版本,记得设置不自动更新"
   },
   {
     "Checked": false,
@@ -54,6 +55,41 @@
     "Name": "TortoiseGit",
     "Params": "/passive",
     "Type": "msi"
+  },
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/Postman-win64-7.3.4-Setup.exe",
+    "Name": "Postman",
+    "Params": "/S",
+    "Type": "exe"
+  },
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/ApiPost7.exe",
+    "Name": "ApiPost7",
+    "Params": "/S",
+    "Type": "exe",
+    "Description": "7和8版本不互通"
+  },
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/npp.8.6.7.Installer",
+    "Name": "Notepad++",
+    "Params": "/S",
+    "Type": "exe",
+    "Description": "notepad++ 这个软件嘛..."
+  },
+  {
+    "AfterInstallParams": "",
+    "Checked": false,
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/npp.8.6.7.Installer",
+    "Name": "Notepad--",
+    "Params": "/S",
+    "Type": "exe",
+    "Description": "notepad--是一个国产跨平台、轻量级的文本编辑器"
   },
   {
     "AfterInstallParams": "",

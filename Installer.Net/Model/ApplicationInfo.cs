@@ -16,6 +16,7 @@
         ///// 暂时不用
         ///// </summary>
         //public string Category { get; set; }
+
         /// <summary>
         /// 自动选中
         /// </summary>
@@ -26,5 +27,6 @@
         public string Type { get; set; }
         public string Params { get; set; }
         public string AfterInstallParams { get; set; }
+        public string Description { get; set; }
     }
 }

@@ -21,8 +21,17 @@ namespace Installer.Net
             flowLayoutPanel.AutoScroll = true;
 
             this.Text += $" v{AssemblyVersion}";
+
+            toolTip.AutoPopDelay = 5000;  // 提示显示持续时间（毫秒）
+            toolTip.InitialDelay = 500;    // 鼠标悬停多久后显示提示
+            toolTip.ReshowDelay = 500;     // 移动鼠标后重新显示提示的延迟
+            toolTip.ShowAlways = true;     // 即使窗体不活动也显示提示
+            toolTip.BackColor = Color.LightYellow;
+            toolTip.ForeColor = Color.Black;
+            toolTip.IsBalloon = true;     
         }
 
+        private ToolTip toolTip = new ToolTip();
         private async Task InitializeTableControlAsync(string url)
         {
             try
@@ -37,6 +46,8 @@ namespace Installer.Net
                     cb.Text = item.Name;
                     cb.Checked = item.Checked;
                     cb.AutoSize = true;
+                    toolTip.SetToolTip(cb, item.Description);
+
                     flowLayoutPanel.Controls.Add(cb);
                 }
             }
