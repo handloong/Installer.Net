@@ -25,9 +25,8 @@
 ![Installer.Net Screenshot](https://github.com/user-attachments/assets/3940d7e7-01e6-4643-94b0-cd2c12ebee5e)
 
 ---
-
 ## 贡献与支持
 如果你对本项目感兴趣，欢迎贡献代码或提出建议！  
-请通过 [GitHub Issues](https://github.com/your-repo/issues) 提交问题或反馈。
+请通过 [GitHub Issues](https://github.com/handloong/Installer.Net/issues) 提交问题或反馈。
 
 感谢您的支持！ 😊
