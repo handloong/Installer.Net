@@ -32,11 +32,11 @@
             this.菜单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.makeSoftListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadConfigJsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.InstallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.选中ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unSelectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.InstallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,13 @@
             this.loadConfigJsonToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.loadConfigJsonToolStripMenuItem.Text = "加载配置";
             // 
+            // InstallToolStripMenuItem
+            // 
+            this.InstallToolStripMenuItem.Name = "InstallToolStripMenuItem";
+            this.InstallToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.InstallToolStripMenuItem.Text = "安装";
+            this.InstallToolStripMenuItem.Click += new System.EventHandler(this.InstallToolStripMenuItem_Click);
+            // 
             // 选中ToolStripMenuItem
             // 
             this.选中ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -107,13 +114,6 @@
             this.flowLayoutPanel.Size = new System.Drawing.Size(781, 518);
             this.flowLayoutPanel.TabIndex = 1;
             // 
-            // InstallToolStripMenuItem
-            // 
-            this.InstallToolStripMenuItem.Name = "InstallToolStripMenuItem";
-            this.InstallToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.InstallToolStripMenuItem.Text = "安装";
-            this.InstallToolStripMenuItem.Click += new System.EventHandler(this.InstallToolStripMenuItem_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -123,6 +123,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Installer.Net / 自动安装器";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.menuStrip1.ResumeLayout(false);

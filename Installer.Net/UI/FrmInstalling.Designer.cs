@@ -28,36 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.lblSpeed = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // progressBar1
+            // progressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 12);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(465, 23);
-            this.progressBar1.Step = 1;
-            this.progressBar1.TabIndex = 0;
+            this.progressBar.Location = new System.Drawing.Point(12, 12);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(465, 23);
+            this.progressBar.Step = 1;
+            this.progressBar.TabIndex = 0;
+            // 
+            // lblSpeed
+            // 
+            this.lblSpeed.AutoSize = true;
+            this.lblSpeed.Location = new System.Drawing.Point(12, 61);
+            this.lblSpeed.Name = "lblSpeed";
+            this.lblSpeed.Size = new System.Drawing.Size(79, 15);
+            this.lblSpeed.TabIndex = 1;
+            this.lblSpeed.Text = "0kb / 0kb";
             // 
             // FrmInstalling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 50);
-            this.Controls.Add(this.progressBar1);
+            this.ClientSize = new System.Drawing.Size(489, 92);
+            this.Controls.Add(this.lblSpeed);
+            this.Controls.Add(this.progressBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmInstalling";
             this.ShowIcon = false;
-            this.Text = "下载中...";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmInstalling_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label lblSpeed;
     }
 }

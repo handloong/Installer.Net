@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -10,6 +11,10 @@ namespace Installer.Net
         public FrmMain()
         {
             InitializeComponent();
+
+            flowLayoutPanel.WrapContents = true; // 确保允许换行
+            flowLayoutPanel.AutoSize = true;     // 自动调整大小
+            flowLayoutPanel.AutoScroll = true;
         }
 
         private void InitializeTableControl(string fileName)
@@ -20,10 +25,13 @@ namespace Installer.Net
 
             foreach (var item in applicationInfos)
             {
-                var app = new UserControlApp(item);
-                flowLayoutPanel.Controls.Add(app);
+                var cb = new CheckBox();
+                cb.Tag = item;
+                cb.Text = item.Name;
+                cb.Checked = item.Checked;
+                cb.AutoSize = true;
+                flowLayoutPanel.Controls.Add(cb);
             }
-
         }
 
         private List<ApplicationInfo> LoadApplicationInfos()
@@ -31,24 +39,22 @@ namespace Installer.Net
             return new List<ApplicationInfo>
             {
                 new ApplicationInfo{
-                     Category ="浏览器",
-                      Name ="谷歌浏览器"
+                      Name ="mRemoteNG",
+                      DownloadUrl="http://10.32.44.80:8006/Soft/Installer.Net/mRemoteNG-Installer-1.77.3.nb-1784.msi",
+                      Type ="msi",
+                      Params ="/passive",
                 },
                 new ApplicationInfo{
-                     Category ="专属",
-                      Name ="bandizip"
+                      Name ="bandizip无广告",
+                       DownloadUrl="http://10.32.44.80:8006/Soft/Installer.Net/BANDIZIP6-SETUP.exe",
+                      Type="exe",
+                      Params ="/S",
                 },
                 new ApplicationInfo{
-                     Category ="专属",
-                      Name ="微信"
-                },
-                new ApplicationInfo{
-                     Category ="专属",
-                      Name ="ToDesk"
-                },
-                new ApplicationInfo{
-                     Category ="专属",
-                      Name ="火绒安全软件"
+                      Name ="微信",
+                      DownloadUrl="http://10.32.44.80:8006/Soft/Installer.Net/WeChatWin.exe",
+                      Type="exe",
+                      Params ="/S",
                 }
             };
         }
@@ -62,9 +68,9 @@ namespace Installer.Net
         {
             foreach (Control item in flowLayoutPanel.Controls)
             {
-                if (item is UserControlApp)
+                if (item is CheckBox)
                 {
-                    (item as UserControlApp).SelectAll();
+                    (item as CheckBox).Checked = true;
                 }
             }
         }
@@ -73,9 +79,10 @@ namespace Installer.Net
         {
             foreach (Control item in flowLayoutPanel.Controls)
             {
-                if (item is UserControlApp)
+                if (item is CheckBox)
                 {
-                    (item as UserControlApp).UnSelectAll();
+                    var cb = (item as CheckBox);
+                    cb.Checked = !cb.Checked;
                 }
             }
         }
@@ -86,12 +93,12 @@ namespace Installer.Net
 
             foreach (Control item in flowLayoutPanel.Controls)
             {
-                if (item is UserControlApp)
+                if (item is CheckBox)
                 {
-                    var app = (item as UserControlApp);
-                    if (app.Checked)
+                    var cb = (item as CheckBox);
+                    if (cb.Checked)
                     {
-                        apps.Add(app.ApplicationInfo);
+                        apps.Add(cb.Tag as ApplicationInfo);
                     }
                 }
             }
