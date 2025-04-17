@@ -57,7 +57,7 @@
             this.关于ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(156, 546);
+            this.menuStrip1.Size = new System.Drawing.Size(90, 546);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,7 +65,7 @@
             // 
             this.配置ToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_草莓;
             this.配置ToolStripMenuItem.Name = "配置ToolStripMenuItem";
-            this.配置ToolStripMenuItem.Size = new System.Drawing.Size(143, 29);
+            this.配置ToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
             this.配置ToolStripMenuItem.Text = "配置";
             this.配置ToolStripMenuItem.Click += new System.EventHandler(this.配置ToolStripMenuItem_Click);
             // 
@@ -73,7 +73,7 @@
             // 
             this.全选ToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_大葱;
             this.全选ToolStripMenuItem.Name = "全选ToolStripMenuItem";
-            this.全选ToolStripMenuItem.Size = new System.Drawing.Size(143, 29);
+            this.全选ToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
             this.全选ToolStripMenuItem.Text = "全选";
             this.全选ToolStripMenuItem.Click += new System.EventHandler(this.全选ToolStripMenuItem_Click);
             // 
@@ -81,7 +81,7 @@
             // 
             this.反选ToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_火龙果;
             this.反选ToolStripMenuItem.Name = "反选ToolStripMenuItem";
-            this.反选ToolStripMenuItem.Size = new System.Drawing.Size(143, 29);
+            this.反选ToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
             this.反选ToolStripMenuItem.Text = "反选";
             this.反选ToolStripMenuItem.Click += new System.EventHandler(this.反选ToolStripMenuItem_Click);
             // 
@@ -89,7 +89,7 @@
             // 
             this.安装ToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_樱桃;
             this.安装ToolStripMenuItem.Name = "安装ToolStripMenuItem";
-            this.安装ToolStripMenuItem.Size = new System.Drawing.Size(143, 29);
+            this.安装ToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
             this.安装ToolStripMenuItem.Text = "安装";
             this.安装ToolStripMenuItem.Click += new System.EventHandler(this.安装ToolStripMenuItem_Click);
             // 
@@ -100,7 +100,7 @@
             this.作者HandLoongToolStripMenuItem});
             this.关于ToolStripMenuItem.Image = global::Installer.Net.Properties.Resources._110_蓝莓;
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(143, 29);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
             this.关于ToolStripMenuItem.Text = "关于";
             // 
             // 开源地址ToolStripMenuItem
@@ -116,9 +116,9 @@
             this.flowLayoutPanel.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel.Controls.Add(this.lblLoading);
             this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(156, 0);
+            this.flowLayoutPanel.Location = new System.Drawing.Point(90, 0);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(625, 546);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(691, 546);
             this.flowLayoutPanel.TabIndex = 1;
             // 
             // lblLoading

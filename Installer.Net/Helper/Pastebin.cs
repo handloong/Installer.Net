@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -21,7 +22,7 @@ namespace Installer.Net
         public static async Task<List<ApplicationInfo>> GetApplicationInfosAsync(string url)
         {
             var json = await GetContentAsync(url);
-            return json.JsonFrom<List<ApplicationInfo>>();
+            return json.JsonFrom<List<ApplicationInfo>>().Where(x => !x.Name.StartsWith("#")).ToList();
         }
 
 
