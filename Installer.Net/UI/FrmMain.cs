@@ -192,5 +192,10 @@ namespace Installer.Net
             Directory.CreateDirectory(tempPath);
             Process.Start(tempPath);
         }
+
+        private void 没有想要的软件ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://uko5na.fanqier.cn/f/gptglt65");
+        }
     }
 }
