@@ -36,6 +36,12 @@ namespace Installer.Net
         {
             try
             {
+                Font checkBoxFont;
+                if (FontFamily.Families.Any(f => f.Name == "Microsoft YaHei UI"))
+                    checkBoxFont = new Font("Microsoft YaHei UI", 11f);
+                else
+                    checkBoxFont = new Font("Arial", 11f);
+
                 var applicationInfos = await Pastebin.GetApplicationInfosAsync(url);
                 flowLayoutPanel.Controls.Clear();
 
@@ -46,6 +52,7 @@ namespace Installer.Net
                     cb.Text = item.Name;
                     cb.Checked = item.Checked;
                     cb.AutoSize = true;
+                    cb.Font = checkBoxFont;
                     toolTip.SetToolTip(cb, item.Description);
 
                     flowLayoutPanel.Controls.Add(cb);
@@ -102,9 +109,9 @@ namespace Installer.Net
         {
             foreach (Control item in flowLayoutPanel.Controls)
             {
-                if (item is CheckBox)
+                if (item is CheckBox cb)
                 {
-                    (item as CheckBox).Checked = true;
+                    cb.Checked = true;
                 }
             }
         }
@@ -113,9 +120,8 @@ namespace Installer.Net
         {
             foreach (Control item in flowLayoutPanel.Controls)
             {
-                if (item is CheckBox)
+                if (item is CheckBox cb)
                 {
-                    var cb = (item as CheckBox);
                     cb.Checked = !cb.Checked;
                 }
             }
@@ -135,22 +141,36 @@ namespace Installer.Net
 
             foreach (Control item in flowLayoutPanel.Controls)
             {
-                if (item is CheckBox)
+                if (item is CheckBox cb && cb.Checked)
                 {
-                    var cb = (item as CheckBox);
-                    if (cb.Checked)
-                    {
-                        apps.Add(cb.Tag as ApplicationInfo);
-                    }
+                    apps.Add(cb.Tag as ApplicationInfo);
                 }
             }
+
             if (apps.Any())
             {
-                new FrmInstalling(apps).ShowDialog();
+                string appNames = string.Join("\n", apps.Select(a => $"• {a.Name}"));
+                string message = $"您确定要安装以下 {apps.Count} 个应用程序吗？\n\n{appNames}";
+
+                var result = MessageBox.Show(
+                    message,
+                    "确认安装",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button2);
+
+                if (result == DialogResult.Yes)
+                {
+                    new FrmInstalling(apps).ShowDialog();
+                }
             }
             else
             {
-                MessageBox.Show("未选中任何程序");
+                MessageBox.Show(
+                    "请至少勾选一个要安装的程序",
+                    "提示",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
         }
     }
