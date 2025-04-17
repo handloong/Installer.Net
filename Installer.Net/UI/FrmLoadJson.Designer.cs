@@ -30,6 +30,7 @@
         {
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.btnInvoke = new System.Windows.Forms.Button();
+            this.linkLabelIct = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txtUrl
@@ -50,11 +51,23 @@
             this.btnInvoke.UseVisualStyleBackColor = true;
             this.btnInvoke.Click += new System.EventHandler(this.btnInvoke_Click);
             // 
+            // linkLabelIct
+            // 
+            this.linkLabelIct.AutoSize = true;
+            this.linkLabelIct.Location = new System.Drawing.Point(12, 64);
+            this.linkLabelIct.Name = "linkLabelIct";
+            this.linkLabelIct.Size = new System.Drawing.Size(67, 15);
+            this.linkLabelIct.TabIndex = 2;
+            this.linkLabelIct.TabStop = true;
+            this.linkLabelIct.Text = "使用内网";
+            this.linkLabelIct.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelIct_LinkClicked);
+            // 
             // FrmLoadJson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(522, 99);
+            this.Controls.Add(this.linkLabelIct);
             this.Controls.Add(this.btnInvoke);
             this.Controls.Add(this.txtUrl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -70,5 +83,6 @@
 
         private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.Button btnInvoke;
+        private System.Windows.Forms.LinkLabel linkLabelIct;
     }
 }

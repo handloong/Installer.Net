@@ -92,6 +92,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Installer.Net-ICT.json" />
     <None Include="Installer.Net.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -110,4 +111,9 @@
     <Content Include="IChoo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties installer_1net_1json__JsonSchema="https://github.com/usnistgov/OSCAL/releases/download/v1.1.2/oscal_profile_schema.json" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

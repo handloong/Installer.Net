@@ -1,14 +1,14 @@
 [
   {
     "AfterInstallParams": "",
-    "Checked": true,
+    "Checked": false,
     "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/mRemoteNG-Installer-1.77.3.nb-1784.msi",
     "Name": "mRemoteNG",
     "Params": "/passive",
     "Type": "msi"
   },
   {
-    "Checked": true,
+    "Checked": false,
     "Name": "bandizip官方绝版无广告",
     "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/BANDIZIP6-SETUP.exe",
     "Type": "exe",
@@ -34,7 +34,7 @@
   {
     "AfterInstallParams": "",
     "Checked": false,
-    "DownloadUrl": "https://www.voidtools.com/Everything-1.4.1.1026.x64-Setup.exe",
+    "DownloadUrl": "http://10.32.44.80:8006/Soft/Installer.Net/Everything-1.4.1.1026.x64-Setup.exe",
     "Name": "Everything",
     "Params": "/S",
     "Type": "exe"

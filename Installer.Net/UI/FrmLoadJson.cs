@@ -25,5 +25,11 @@ namespace Installer.Net.UI
             _action.Invoke(txtUrl.Text);
             this.Close();
         }
+
+        private void linkLabelIct_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            txtUrl.Text = Pastebin.ICTUrl;
+            btnInvoke_Click(null, null);
+        }
     }
 }

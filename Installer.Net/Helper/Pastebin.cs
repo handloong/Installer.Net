@@ -8,6 +8,7 @@ namespace Installer.Net
     public class Pastebin
     {
         public static string DefaultUrl = "https://pastebin.com/raw/BqXs0rhw";
+        public static string ICTUrl = "http://10.32.44.80:8006/Soft/Installer.Net/Installer.Net-ICT.json";
 
 
         private static readonly HttpClient _httpClient = new HttpClient();
